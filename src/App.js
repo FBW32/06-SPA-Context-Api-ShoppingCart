@@ -1,12 +1,20 @@
 import React from "react";
+import CartContext from "./CartContext";
+import ProductList from "./ProductList";
+import ShoppingCart from "./ShoppingCart";
+import './App.css'
 
-export default class App extends React.Component {
-  render() {
+export default function App() {
 
-    return (
-      <div>
-     	<h1>My React Project</h1>
+  const style = { width: "25rem", border: '1px solid grey', padding: '15px', margin: '5rem' }
+
+  return (
+    <CartContext>
+      <div style={style}>
+        <ProductList />
+        <ShoppingCart />
       </div>
-    );
-  }
+    </CartContext>
+  )
 }
+
